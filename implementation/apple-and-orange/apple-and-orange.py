@@ -19,8 +19,8 @@ import sys
 #
 
 def countApplesAndOranges(s, t, a, b, apples, oranges):
-    appleCount = len([ad for ad in (a + d for d in apples) if ad >= s and ad <= t])
-    orangeCount = len([bd for bd in (b + d for d in oranges) if bd >= s and bd <= t])
+    appleCount = sum(1 for ad in (a + d for d in apples) if ad >= s and ad <= t)
+    orangeCount = sum(1 for bd in (b + d for d in oranges) if bd >= s and bd <= t)
 
     print(appleCount)
     print(orangeCount)
